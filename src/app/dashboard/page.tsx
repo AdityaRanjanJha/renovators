@@ -27,7 +27,7 @@ import {
 
 export default function Dashboard() {
 	return (
-		<div className="flex h-screen bg-gray-100">
+		<div className="flex h-screen bg-gray-100  text-gray-600">
 			{/* Sidebar */}
 			<aside className="w-64 bg-white p-4 shadow-md">
 				<div className="text-2xl font-bold text-blue-500 mb-8">RENOVATORS</div>

@@ -10,9 +10,9 @@ export default function SignupPage() {
 		<div className="min-h-screen bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center p-4">
 			<div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-md">
 				<h1 className="text-3xl font-bold text-blue-600 mb-6">RENOVATORS</h1>
-				<h2 className="text-2xl font-semibold mb-6">Create an Account</h2>
+				<h2 className="text-2xl font-semibold mb-6 text-gray-600">Create an Account</h2>
 				<form className="space-y-4">
-					<div className="space-y-2">
+					<div className="space-y-2  text-gray-600">
 						<Label htmlFor="email">Email address:</Label>
 						<Input
 							id="email"
@@ -20,11 +20,11 @@ export default function SignupPage() {
 							placeholder="esteban_schiller@gmail.com"
 						/>
 					</div>
-					<div className="space-y-2">
+					<div className="space-y-2  text-gray-600">
 						<Label htmlFor="username">Username</Label>
 						<Input id="username" placeholder="Username" />
 					</div>
-					<div className="space-y-2">
+					<div className="space-y-2 text-gray-600">
 						<div className="flex justify-between">
 							<Label htmlFor="password">Password</Label>
 							<Link href="#" className="text-sm text-blue-600 hover:underline">
@@ -33,7 +33,7 @@ export default function SignupPage() {
 						</div>
 						<Input id="password" type="password" />
 					</div>
-					<div className="flex items-center space-x-2">
+					<div className="flex items-center space-x-2  text-gray-600">
 						<Checkbox id="terms" />
 						<Label htmlFor="terms">I accept terms and conditions</Label>
 					</div>

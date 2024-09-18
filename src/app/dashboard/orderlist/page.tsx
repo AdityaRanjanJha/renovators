@@ -92,7 +92,7 @@ export default function OrderList() {
 	const [selectedStatus, setSelectedStatus] = useState("");
 
 	return (
-		<div className="flex h-screen bg-gray-100">
+		<div className="flex h-screen bg-gray-100  text-gray-600">
 			<aside className="w-64 bg-white p-6 flex flex-col">
 				<h1 className="text-2xl font-bold text-blue-600 mb-8">RENOVATORS</h1>
 				<nav className="flex-1">
