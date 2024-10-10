@@ -1,3 +1,4 @@
+'use client'
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -24,13 +25,26 @@ import {
 	UserCircle,
 	Users,
 } from "lucide-react";
+import { useState } from "react";
 
 export default function Dashboard() {
+	const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 	return (
 		<div className="flex h-screen bg-gray-100  text-gray-600">
 			{/* Sidebar */}
-			<aside className="w-64 bg-white p-4 shadow-md">
+			<aside
+        className={`fixed inset-y-0 left-0 z-30 w-64 bg-white p-4 shadow-md transform transition-transform duration-300 ease-in-out ${
+          isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+        } md:translate-x-0 md:relative md:translate-x-0`}
+      >
 				<div className="text-2xl font-bold text-blue-500 mb-8">RENOVATORS</div>
+				<Button
+            variant="ghost"
+            className="md:hidden"
+            onClick={() => setIsSidebarOpen(false)}
+          >
+            ✖️
+          </Button>
 				<nav className="space-y-2">
 					<Button variant="default" className="w-full justify-start">
 						<LayoutDashboard className="mr-2 h-4 w-4" />
@@ -95,15 +109,24 @@ export default function Dashboard() {
 			</aside>
 
 			{/* Main content */}
-			<main className="flex-1 p-8 overflow-auto">
-				<div className="flex justify-between items-center mb-8">
-					<h1 className="text-3xl font-bold">Dashboard</h1>
-					<div className="flex items-center space-x-4">
+			<div className="flex-1 p-4 md:ml-64">
+        {/* Mobile Sidebar Toggle Button */}
+        <Button
+          variant="ghost"
+          className="md:hidden mb-4"
+          onClick={() => setIsSidebarOpen(true)}
+        >
+          ☰
+        </Button>
+
+			<div className="flex flex-col md:flex-row md:justify-between md:items-center mb-8">
+			<h1 className="text-2xl md:text-3xl font-bold mb-4 md:mb-0">Dashboard</h1>
+					<div className="flex items-center space-x-2 md:space-x-4">
 						<Button variant="outline" size="icon">
 							<Bell className="h-4 w-4" />
 						</Button>
 						<Select>
-							<SelectTrigger className="w-[180px]">
+						<SelectTrigger className="w-28 md:w-[180px]">
 								<SelectValue placeholder="English" />
 							</SelectTrigger>
 							<SelectContent>
@@ -120,11 +143,11 @@ export default function Dashboard() {
 							<p className="text-sm font-medium">Jane Doe</p>
 							<p className="text-xs text-gray-500">Admin</p>
 						</div>
-						<ChevronDown className="h-4 w-4 text-gray-500" />
+						<ChevronDown className="hidden md:block h-4 w-4 text-gray-500" />
 					</div>
 				</div>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6">
 					<Card>
 						<CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
 							<CardTitle className="text-sm font-medium">Total User</CardTitle>
@@ -217,7 +240,7 @@ export default function Dashboard() {
 					</Card>
 				</div>
 
-				<div className="grid gap-6 md:grid-cols-2">
+				<div className="grid gap-4 md:gap-6 md:grid-cols-2">
 					<Card>
 						<CardHeader>
 							<CardTitle>Client Satisfaction</CardTitle>
@@ -225,7 +248,7 @@ export default function Dashboard() {
 						<CardContent>
 							<div className="h-[200px]">
 								{/* Placeholder for chart */}
-								<div className="w-full h-full bg-gray-100 flex items-center justify-center">
+								<div className="h-[150px] md:h-[200px] bg-gray-100 flex items-center justify-center">
 									Chart Placeholder
 								</div>
 							</div>
@@ -267,7 +290,7 @@ export default function Dashboard() {
 						</CardContent>
 					</Card>
 				</div>
-			</main>
+			</div>
 		</div>
 	);
 }
