@@ -25,6 +25,7 @@ import {
 	UserCircle,
 	Users,
 } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Dashboard() {
@@ -54,14 +55,18 @@ export default function Dashboard() {
 						<Package className="mr-2 h-4 w-4" />
 						Products
 					</Button>
+					<Link href="/dashboard/calender">
 					<Button variant="ghost" className="w-full justify-start">
 						<Inbox className="mr-2 h-4 w-4" />
-						Inbox
+						Calender
 					</Button>
+					</Link>
+					<Link href="/dashboard/orderlist">
 					<Button variant="ghost" className="w-full justify-start">
 						<FileText className="mr-2 h-4 w-4" />
 						Order Lists
 					</Button>
+					</Link>
 					<div className="pt-4 pb-2">
 						<p className="px-4 text-xs font-semibold text-gray-400 uppercase">
 							Pages
@@ -71,10 +76,12 @@ export default function Dashboard() {
 						<FolderKanban className="mr-2 h-4 w-4" />
 						File Manager
 					</Button>
+					<Link href="/todolist">
 					<Button variant="ghost" className="w-full justify-start">
 						<CheckSquare className="mr-2 h-4 w-4" />
 						To-Do
 					</Button>
+					</Link>
 					<Button variant="ghost" className="w-full justify-start">
 						<Users className="mr-2 h-4 w-4" />
 						Contact
