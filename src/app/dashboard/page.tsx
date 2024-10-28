@@ -147,8 +147,9 @@ export default function Dashboard() {
 							<AvatarFallback>JD</AvatarFallback>
 						</Avatar>
 						<div>
-							<p className="text-sm font-medium">Jane Doe</p>
-							<p className="text-xs text-gray-500">Admin</p>
+							{/* <p className="text-sm font-medium">Jane Doe</p>
+							<p className="text-xs text-gray-500">Admin</p> */}
+							
 						</div>
 						<ChevronDown className="hidden md:block h-4 w-4 text-gray-500" />
 					</div>

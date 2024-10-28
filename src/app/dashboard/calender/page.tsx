@@ -78,7 +78,7 @@ export default function FullPageCalendar() {
 
   return (
     <div className="min-h-screen p-4 bg-gray-100">
-      <h1 className="text-2xl font-bold mb-4">Interactive Calendar</h1>
+      <h1 className="text-2xl font-bold mb-4 text-black">Event Manager</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Card>
           <CardContent className="p-4">
