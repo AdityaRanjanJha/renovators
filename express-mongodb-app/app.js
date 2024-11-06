@@ -5,6 +5,7 @@ const calendarRoutes = require("./routes/calendar");
 const orderRoutes = require("./routes/orders");
 const userProfilesRoutes = require("./routes/userProfiles");
 const todoListRoutes = require("./routes/todoList");
+const materialsRoutes = require("./routes/materials");
 
 const app = express();
 const PORT = 6969;
@@ -33,6 +34,7 @@ MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
 		app.use("/orders", orderRoutes);
 		app.use("/userProfiles", userProfilesRoutes);
 		app.use("/todoList", todoListRoutes);
+		app.use("/materials", materialsRoutes);
 
 		// Start the server
 		app.listen(PORT, () => {

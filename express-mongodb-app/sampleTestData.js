@@ -87,4 +87,31 @@ module.exports = {
 		},
 		// Add more calendar events as needed
 	],
+	materials: [
+		{
+			name: "Cement",
+			quantity: 100,
+			unit: "bags",
+			price: 5.0,
+		},
+		{
+			name: "Bricks",
+			quantity: 1000,
+			unit: "pieces",
+			price: 0.5,
+		},
+		{
+			name: "Steel Rods",
+			quantity: 500,
+			unit: "kg",
+			price: 2.0,
+		},
+		{
+			name: "Sand",
+			quantity: 200,
+			unit: "tons",
+			price: 10.0,
+		},
+		// Add more materials as needed
+	],
 };
