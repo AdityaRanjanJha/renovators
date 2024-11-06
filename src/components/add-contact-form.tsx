@@ -12,9 +12,8 @@ import {
 import { Input } from "@/components/ui/input"
 import { Camera } from "lucide-react"
 
-export default function Component() {
+export function AddContactForm() {
   return (
-    
     <div className="min-h-screen bg-gray-50">
       <Card className="mx-auto max-w-3xl p-6 bg-white rounded-lg">
         <h1 className="text-2xl font-semibold mb-8">Add New Contact</h1>
